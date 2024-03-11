@@ -25,3 +25,11 @@ The Device class creates and keeps 10 character long data, first two character a
 The Mock_device function creates a device and sends the data of the device to Monitor function using TCP/IP until termination flag raised<br>
 The Shutdown function raises the termination flag and sends a null data to Monitor to prevent the deadlock<br>
 The main function initializes winsock, calls the asynchronous threads (first thread is monitor, the rest is the mock devices) and wait untils the a keyboard input. After the keyboard input, shutdown function is called and winsock is terminated.<br>
+
+How tu run:
+1) The Virtual Studio Code 2022 should be downloaded in a Windows Machine<br>
+2) Pull the project to the Virtual Studio<br>
+3) Be sure the compiler is using C++17 (In Solution explorer right click to project -> properties -> Configuration properties -> C/C++ -> Language -> C++ Language Standart -> from the dropdown menu ISO C++ 17 standart -> apply and accept)<br>
+4) Winsock preprocessor defitions should be added (In Solution explorer right click to project -> properties -> Configuration properties -> C/C++ -> Preprocessor -> edit Preprocessor Deifitions -> add "_WINSOCKAPI_" and "_WINSOCK_H_" to the bottom of top list-> apply and accept)<br>
+5) Additional input dependencies should be added to Linker (In Solution explorer right click to project -> properties -> Configuration properties -> Linker -> Input -> edit Additional Dependencies -> add "ws2_32.lib" to the bottom of top list-> apply and accept))<br>
+6) Press "F5" to start Local Windows Debugger
