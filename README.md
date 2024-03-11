@@ -32,4 +32,5 @@ How tu run:
 3) Be sure the compiler is using C++17 (In Solution explorer right click to project -> properties -> Configuration properties -> C/C++ -> Language -> C++ Language Standart -> from the dropdown menu ISO C++ 17 standart -> apply and accept)<br>
 4) Winsock preprocessor defitions should be added (In Solution explorer right click to project -> properties -> Configuration properties -> C/C++ -> Preprocessor -> edit Preprocessor Deifitions -> add "_WINSOCKAPI_" and "_WINSOCK_H_" to the bottom of top list-> apply and accept)<br>
 5) Additional input dependencies should be added to Linker (In Solution explorer right click to project -> properties -> Configuration properties -> Linker -> Input -> edit Additional Dependencies -> add "ws2_32.lib" to the bottom of top list-> apply and accept))<br>
-6) Press "F5" to start Local Windows Debugger
+6) Press "F5" to start Local Windows Debugger<br>
+7) The Windows Firewall Warning will pop-up, approve the execution, if it still dropped by firewall, the firewall behaviour can be changed (Control Panel -> System and Security -> Windows Defender Firewall -> click to top link on lefthand panel "Allow applications to communicate through Windows Firewall" -> give permission to EatonGomework.exe<br>
